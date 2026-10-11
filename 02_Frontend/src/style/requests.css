@@ -1,0 +1,1464 @@
+/* =========================================================
+   REQUESTS PAGE
+   PROFESSIONAL CLOUD DASHBOARD UI
+========================================================= */
+
+.requests-page {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 32px 36px 50px;
+    box-sizing: border-box;
+    color: #0f172a;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.requests-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.requests-header > div {
+    flex: 1;
+}
+
+.requests-header h1 {
+    margin: 0 0 7px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #0f172a;
+}
+
+.requests-header p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+
+/* =========================================================
+   NEW REQUEST BUTTON
+========================================================= */
+
+.new-request-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 42px;
+    padding: 0 17px;
+
+    border: 1px solid #2563eb;
+    border-radius: 9px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 4px rgba(37, 99, 235, 0.15);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.new-request-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.22);
+}
+
+.new-request-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   STATISTICS GRID
+========================================================= */
+
+.modern-stats-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.modern-stat-card {
+    position: relative;
+
+    min-height: 112px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    font-family: inherit;
+    text-align: left;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.03);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.modern-stat-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #cbd5e1;
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.07);
+}
+
+.modern-stat-card:focus {
+    outline: none;
+}
+
+
+/* =========================================================
+   ACTIVE STAT CARD
+========================================================= */
+
+.modern-stat-card.stat-card-active {
+    border-color: #2563eb;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f8fbff 100%
+        );
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08),
+        0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.modern-stat-card.stat-card-active::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 18px;
+    bottom: 18px;
+
+    width: 3px;
+
+    border-radius:
+        0 4px 4px 0;
+
+    background: #2563eb;
+}
+
+
+/* =========================================================
+   STAT ICON
+========================================================= */
+
+.stat-card-icon {
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+}
+
+.total-icon {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.pending-icon {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.approved-icon {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.rejected-icon {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+
+/* =========================================================
+   STAT CONTENT
+========================================================= */
+
+.stat-card-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-card-content span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.stat-card-content strong {
+    display: block;
+
+    color: #0f172a;
+
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.request-error {
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #fecaca;
+    border-radius: 9px;
+
+    background: #fef2f2;
+    color: #b91c1c;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   REQUEST TABLE CARD
+========================================================= */
+
+.requests-table-card {
+    overflow: hidden;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.requests-table-header {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    box-sizing: border-box;
+}
+
+.requests-table-header > div {
+    min-width: 0;
+}
+
+.requests-table-header h2 {
+    margin: 0 0 4px;
+
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 650;
+
+    color: #0f172a;
+}
+
+.requests-table-header p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   COUNT BADGE
+========================================================= */
+
+.request-count-badge {
+    min-width: 30px;
+    height: 30px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 9px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dbeafe;
+    border-radius: 999px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.requests-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.requests-table {
+    width: 100%;
+
+    min-width: 1250px;
+
+    border-collapse: collapse;
+
+    table-layout: auto;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.requests-table thead {
+    background: #f8fafc;
+}
+
+.requests-table th {
+    height: 48px;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.45px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.requests-table td {
+    height: 62px;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+}
+
+.requests-table tbody tr {
+    transition:
+        background 0.15s ease;
+}
+
+.requests-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.requests-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   REQUEST ID
+========================================================= */
+
+.requests-table td:first-child strong {
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.request-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    min-width: 88px;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+}
+
+.status-pending {
+    color: #a16207;
+    background: #fef9c3;
+    border: 1px solid #fde68a;
+}
+
+.status-approved {
+    color: #047857;
+    background: #d1fae5;
+    border: 1px solid #a7f3d0;
+}
+
+.status-rejected {
+    color: #b91c1c;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+.status-default {
+    color: #475569;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.view-request-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border: 1px solid #dbeafe;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #2563eb;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.view-request-btn:hover {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.requests-empty-state {
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px 25px;
+
+    text-align: center;
+}
+
+.requests-empty-state svg {
+    margin-bottom: 14px;
+
+    color: #94a3b8;
+}
+
+.requests-empty-state h3 {
+    margin: 0 0 7px;
+
+    color: #1e293b;
+
+    font-size: 16px;
+    font-weight: 650;
+}
+
+.requests-empty-state p {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+
+    margin-bottom: 14px;
+
+    border: 3px solid #e2e8f0;
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        requestSpin 0.8s linear infinite;
+}
+
+@keyframes requestSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.request-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background:
+        rgba(15, 23, 42, 0.55);
+
+    backdrop-filter:
+        blur(4px);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.request-modal {
+    width: 100%;
+    max-width: 620px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.20);
+}
+
+.request-details-modal {
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.request-modal-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 22px 24px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.request-modal-header h2 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.request-modal-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.modal-close-btn {
+    width: 34px;
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #64748b;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.request-form {
+    padding: 24px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FORM INPUTS
+========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 16px;
+
+    border: 1px solid #d9e0ea;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #1e293b;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* SELECT */
+
+.request-form select {
+    min-height: 48px;
+
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+.request-form select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.request-form select option {
+    background: #ffffff;
+    color: #1e293b;
+
+    font-size: 14px;
+}
+
+.request-form select:disabled {
+    background: #f8fafc;
+    color: #94a3b8;
+
+    cursor: not-allowed;
+}
+
+
+/* INPUT */
+
+.request-form input[type="text"],
+.request-form input[type="number"],
+.request-form textarea {
+    min-height: 48px;
+}
+
+.request-form input[type="text"]:focus,
+.request-form input[type="number"]:focus,
+.request-form textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.request-form input::placeholder,
+.request-form textarea::placeholder {
+    color: #94a3b8;
+}
+
+.request-form textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+
+/* =========================================================
+   FORM ERROR
+========================================================= */
+
+.form-error-text {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #dc2626;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.request-form-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+.cancel-btn,
+.submit-request-btn {
+    min-height: 40px;
+
+    padding: 0 16px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.cancel-btn {
+    border: 1px solid #cbd5e1;
+
+    background: #ffffff;
+    color: #475569;
+}
+
+.cancel-btn:hover {
+    background: #f8fafc;
+}
+
+.submit-request-btn {
+    border: 1px solid #2563eb;
+
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.submit-request-btn:hover {
+    background: #1d4ed8;
+}
+
+.submit-request-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   REQUEST DETAILS
+========================================================= */
+
+.request-details-content {
+    padding: 24px;
+}
+
+.detail-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.detail-row > span:first-child {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.detail-row strong {
+    color: #0f172a;
+
+    font-size: 13px;
+
+    text-align: right;
+
+    max-width: 65%;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   JUSTIFICATION
+========================================================= */
+
+.detail-justification {
+    padding-top: 20px;
+}
+
+.detail-justification > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.detail-justification p {
+    margin: 0;
+
+    padding: 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+
+    background: #f8fafc;
+    color: #334155;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   ADMIN ACTION SECTION
+========================================================= */
+
+.admin-action-section {
+    margin-top: 24px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+.admin-request-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ADMIN ACTION BUTTONS
+========================================================= */
+
+.admin-approve-btn,
+.admin-reject-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* APPROVE */
+
+.admin-approve-btn {
+    border: 1px solid #86efac;
+
+    background: #ecfdf5;
+    color: #15803d;
+}
+
+.admin-approve-btn:hover {
+    background: #dcfce7;
+
+    border-color: #4ade80;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px rgba(22, 163, 74, 0.14);
+}
+
+
+/* REJECT */
+
+.admin-reject-btn {
+    border: 1px solid #fecaca;
+
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.admin-reject-btn:hover {
+    background: #fee2e2;
+
+    border-color: #fca5a5;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px rgba(220, 38, 38, 0.14);
+}
+
+
+/* DISABLED */
+
+.admin-approve-btn:disabled,
+.admin-reject-btn:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   ADMIN ACTION ERROR
+========================================================= */
+
+.admin-action-error {
+    margin-bottom: 12px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+
+    background: #fef2f2;
+    color: #b91c1c;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+    .modern-stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .requests-page {
+        padding: 24px 20px 40px;
+    }
+
+    .requests-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .new-request-btn {
+        width: auto;
+    }
+
+    .requests-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .requests-table {
+        min-width: 1250px;
+    }
+
+    .request-modal-overlay {
+        padding: 16px;
+    }
+
+    .request-modal {
+        max-height: 94vh;
+    }
+
+    .admin-request-actions {
+        justify-content: stretch;
+
+        flex-direction: column;
+    }
+
+    .admin-approve-btn,
+    .admin-reject-btn {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .requests-page {
+        padding: 20px 14px 35px;
+    }
+
+    .modern-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .requests-header h1 {
+        font-size: 25px;
+    }
+
+    .new-request-btn {
+        width: 100%;
+    }
+
+    .requests-table-header {
+        padding: 16px;
+    }
+
+    .request-form {
+        padding: 18px;
+    }
+
+    .request-details-content {
+        padding: 18px;
+    }
+
+    .detail-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .detail-row strong {
+        max-width: 100%;
+
+        text-align: left;
+    }
+
+    .request-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .submit-request-btn {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   REQUESTER INFO
+========================================================= */
+
+.requester-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.requester-info strong {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.requester-info span {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* =========================================================
+   REQUESTS TABLE ALIGNMENT
+========================================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.requests-table {
+    width: 100%;
+    min-width: 1650px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Common table cell styling */
+.requests-table th,
+.requests-table td {
+    padding: 14px 12px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   COLUMN WIDTHS
+========================================================= */
+
+/* 1. Request ID */
+.requests-table th:nth-child(1),
+.requests-table td:nth-child(1) {
+    width: 85px;
+    text-align: center;
+}
+
+/* 2. Requested By */
+.requests-table th:nth-child(2),
+.requests-table td:nth-child(2) {
+    width: 150px;
+}
+
+/* 3. Resource */
+.requests-table th:nth-child(3),
+.requests-table td:nth-child(3) {
+    width: 190px;
+    white-space: normal;
+}
+
+/* 4. Type */
+.requests-table th:nth-child(4),
+.requests-table td:nth-child(4) {
+    width: 120px;
+}
+
+/* 5. Provider */
+.requests-table th:nth-child(5),
+.requests-table td:nth-child(5) {
+    width: 130px;
+}
+
+/* 6. CPU */
+.requests-table th:nth-child(6),
+.requests-table td:nth-child(6) {
+    width: 70px;
+    text-align: center;
+}
+
+/* 7. Memory */
+.requests-table th:nth-child(7),
+.requests-table td:nth-child(7) {
+    width: 85px;
+    text-align: center;
+}
+
+/* 8. Storage */
+.requests-table th:nth-child(8),
+.requests-table td:nth-child(8) {
+    width: 85px;
+    text-align: center;
+}
+
+/* 9. Status */
+.requests-table th:nth-child(9),
+.requests-table td:nth-child(9) {
+    width: 110px;
+    text-align: center;
+}
+
+/* 10. Requested At */
+.requests-table th:nth-child(10),
+.requests-table td:nth-child(10) {
+    width: 170px;
+}
+
+/* 11. Reviewed By */
+.requests-table th:nth-child(11),
+.requests-table td:nth-child(11) {
+    width: 150px;
+}
+
+/* 12. Reviewed At */
+.requests-table th:nth-child(12),
+.requests-table td:nth-child(12) {
+    width: 170px;
+}
+
+
+/* =========================================================
+   REQUESTER / REVIEWER INFORMATION
+========================================================= */
+
+.requester-info,
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.requester-info strong,
+.reviewer-info strong {
+    font-size: 13px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.requester-info span,
+.reviewer-info span {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   DATE COLUMNS
+========================================================= */
+
+.requests-table td:nth-child(10),
+.requests-table td:nth-child(12) {
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.requests-table td:nth-child(9) {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PREVENT OVERFLOW
+========================================================= */
+
+.requests-table td {
+    overflow: hidden;
+}
+
+.requests-table th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
